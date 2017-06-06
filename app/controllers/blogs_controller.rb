@@ -53,7 +53,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Post was deletedT.' }
+      format.html { redirect_to blogs_url, notice: 'Post was removed.' }
     end
   end
 
