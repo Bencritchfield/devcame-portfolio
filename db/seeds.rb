@@ -19,7 +19,8 @@ puts "10 blog posts created"
 		title: "Portfolio title: #{portfolio_item}",
 		subtitle: "My great service",
 		body:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-		main_image: "http://via.placeholder.com/600x400"
+		main_image: "http://via.placeholder.com/600x400",
+		thumb_image: "http://via.placeholder.com/300x250"
      
 		)
 end
