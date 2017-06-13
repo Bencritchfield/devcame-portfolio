@@ -1,3 +1,4 @@
+
 class Portfolio < ApplicationRecord
 	has_many :technologies
 	accepts_nested_attributes_for :technologies, 
