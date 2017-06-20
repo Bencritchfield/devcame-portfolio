@@ -28,7 +28,7 @@ layout 'portfolio'
 
 
 	def edit
-		s
+		
       
 	end
 
