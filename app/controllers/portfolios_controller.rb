@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
 layout 'portfolio'
 
 	def index
@@ -27,14 +28,14 @@ layout 'portfolio'
 
 
 	def edit
-		@portfolio_item = Portfolio.find(params[:id])
+		s
       
 	end
 
 
 
   def update
-  	@portfolio_item = Portfolio.find(params[:id])
+  	
 
     respond_to do |format|
       if @portfolio_item.update(portfolio_pramas)
@@ -45,13 +46,13 @@ layout 'portfolio'
     end
   end
   def show
-    @portfolio_item = Portfolio.find(params[:id])
+   
   end
 
   
   def destroy
     #perform the lookup
-    @portfolio_item = Portfolio.find(params[:id])
+
 
     #destroy/delete the record
     @portfolio_item.destroy
@@ -70,6 +71,9 @@ layout 'portfolio'
                                       :body,
                                       technologies_attributes: [:name])
   end
+    def set_portfolio_item
+        @portfolio_item = Portfolio.find(params[:id])
+      end
 
 
 end
