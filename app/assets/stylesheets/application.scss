@@ -157,13 +157,13 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 60rem;
   }
+}
 
-  /*
+ /*
  * Custom Styles
  */
-}
 
 .card-block {
   color: black;
@@ -175,7 +175,7 @@ body {
   color: black;
 }
 
-.register_text {
+.register_log_in {
   text-align:right;
 }
 
@@ -185,19 +185,7 @@ body {
   float: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.app-nav span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
