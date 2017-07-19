@@ -5,7 +5,7 @@ layout 'portfolio'
 
 
 	def index
-		@portfolio_items = Portfolio.all
+		@portfolio_items = Portfolio.by_position
   end
   def angular
     @angular_portfolio_items = Portfolio.angular
@@ -21,7 +21,6 @@ layout 'portfolio'
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Your post is now live.' }
-        format.json { render :show, status: :created, location: @blog }
       else
         format.html { render :new }
       end
