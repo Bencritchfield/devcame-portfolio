@@ -3,32 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
-    <meta name="keywords" content="<%= @seo_keyworkds %>" />
+    <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'shared/portfolio_nav'%>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+          <%= render "shared/portfolio_nav" %>
 
+          <%= yield %>
 
-      
+          <%= source_helper("application") %>
 
-    
-
-    <%= yield %>
-
-    <%= render 'shared/portfolio_footer' %>
-
-
-
-    <%= source_helper("application") %>
-  </body
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
-
