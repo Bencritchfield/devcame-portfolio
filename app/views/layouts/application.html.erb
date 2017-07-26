@@ -18,14 +18,15 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
+
           <%= render "shared/application_nav" %>
 
           <%= yield %>
 
-          <%= source_helper("application") %>
+          <%= video_tag "atom.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "background_video" %>
 
+          <%= source_helper("application") %>
         </div>
-      </div>
     </div>
   </body>
 </html>
