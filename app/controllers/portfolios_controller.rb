@@ -21,8 +21,8 @@ end
 
 	def new
 		@portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
 	end
+
 	def create
     @portfolio_item = Portfolio.new(portfolio_params)
 
@@ -78,7 +78,7 @@ end
     params.require(:portfolio).permit(:title, 
                                       :subtitle, 
                                       :body,
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: [:id, :name, :_destroy])
   end
     def set_portfolio_item
         @portfolio_item = Portfolio.find(params[:id])
