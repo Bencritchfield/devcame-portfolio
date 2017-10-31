@@ -43,4 +43,6 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 gem 'redis', '~> 4.0'
 gem 'rails_12factor'
+gem 'redcarpet', '~>3.4' 
+gem 'coderay', '~> 1.1', '<= 1.1.1'
 
